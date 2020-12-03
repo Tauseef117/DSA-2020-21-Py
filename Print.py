@@ -1,0 +1,33 @@
+def format_name(first_name, last_name):
+ if last_name != '' and first_name != '':
+    string = "Name: " + last_name + ", " + first_name
+ elif first_name != ' ' or last_name !=' ':
+    string = ("Name: " + first_name + last_name)
+ else:
+    string = ''
+ return string
+
+print(format_name("Ernest", "Hemingway"))
+# Should return the string "Name: Hemingway, Ernest"
+
+print(format_name("", "Madonna"))
+# Should return the string "Name: Madonna"
+
+print(format_name("Voltaire", ""))
+# Should return the string "Name: Voltaire"
+
+print(format_name("", ""))
+# Should return an empty string
+
+a="abc"
+b="cba"
+c=45
+print("a is %s and b is %s c is %d" %(a,b,c))
+
+def car_listing(car_prices):
+  result = ""
+  for i,j in car_prices.items():
+    result += "{} costs {} dollars".format(i,j) + "\n"
+  return result
+
+print(car_listing({"Kia Soul":19000, "Lamborghini Diablo":55000, "Ford Fiesta":13000, "Toyota Prius":24000}))
